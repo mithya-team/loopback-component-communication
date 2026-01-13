@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/loopback-component-communication"
+        "url": "https://github.com/mithya-team/loopback-component-communication.git"
     },
     "author": "",
     "license": "ISC",
@@ -19,7 +19,7 @@
         "http-status-codes": "^1.4.0",
         "lodash": "^4.17.15",
         "loopback": "^3.26.0",
-        "loopback-component-trash": "git+ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/loopback-component-trash",
+        "loopback-component-trash": "https://github.com/mithya-team/loopback-component-trash.git",
         "moment": "^2.27.0",
         "node-schedule": "^1.3.2",
         "twilio": "^3.40.0"

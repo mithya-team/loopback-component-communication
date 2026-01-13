@@ -1,0 +1,28 @@
+{
+    "Communication": [
+        {
+            "name": "Email From",
+            "key": "email_from",
+            "type": "string",
+            "value": "admin@mithya.com"
+        },
+        {
+            "name": "Sms From",
+            "key": "sms_from",
+            "type": "string",
+            "value": "+12085916665"
+        },
+        {
+            "name": "Rate limit email daily",
+            "key": "email_rateLimit",
+            "type": "number",
+            "value": 10000
+        },
+        {
+            "name": "Refresh period after limit (ms)",
+            "key": "email_refreshPeriod",
+            "type": "number",
+            "value": 60000
+        }
+    ]
+}

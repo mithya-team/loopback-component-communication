@@ -1,0 +1,42 @@
+{
+    "name": "CommunicationTracking",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "mixins": {
+        "Slug": {}
+    },
+    "properties": {
+        "sent": {
+            "type": [
+                "string"
+            ],
+            "required": false,
+            "default": []
+        },
+        "failed": {
+            "type": [
+                "string"
+            ],
+            "required": false,
+            "default": []
+        }
+    },
+    "validations": [],
+    "relations": {
+        "schedule": {
+            "type": "belongsTo",
+            "model": "ScheduledCommunication",
+            "foreignKey": "scheduleId"
+        },
+        "communication": {
+            "type": "belongsTo",
+            "model": "Communication",
+            "foreignKey": "communicationId"
+        }
+    },
+    "acls": [],
+    "methods": {}
+}

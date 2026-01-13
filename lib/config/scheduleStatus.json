@@ -1,0 +1,7 @@
+{
+    "NOT_STARTED": "notStarted",
+    "IN_PROGRESS": "inProgress",
+    "STOPPED": "stopped",
+    "COMPLETED": "completed",
+    "RUNNING": "running"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "ScheduledCommunication",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+      "validateUpsert": true
+    },
+    "mixins": {
+        "Slug":{}
+    },
+    "properties": {
+        "name":{
+            "type":"string",
+            "required":true
+        },
+        "type":{
+            "type":"string",
+            "required":true
+        },
+        "recurrenceRule":{
+            "type":"string",
+            "required":false
+        },
+        "data":{
+            "type":"object",
+            "required":true
+        },
+        "enabled":{
+            "type":"boolean",
+            "required":true
+        },
+        "createdBy":{
+            "type":"string",
+            "required":true
+        },
+        "deleted":{
+            "type":"boolean",
+            "default":false,
+            "required":true
+        },
+        "status":{
+            "type":"string",
+            "required":false,
+            "default":""
+        }
+    },
+    "validations": [],
+    "relations": {
+        
+    },
+    "acls": [
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "ADMIN",
+            "permission": "ALLOW"
+        }
+    ],
+    "methods": {}
+  }
+  

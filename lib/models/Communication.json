@@ -1,0 +1,75 @@
+{
+    "name": "Communication",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "mixins": {},
+    "properties": {
+        "data": {
+            "type": "object",
+            "required": true
+        },
+        "channel": {
+            "type": "string",
+            "required": true
+        },
+        "scheduleId": {
+            "type": "string",
+            "required": false
+        }
+    },
+    "validations": [],
+    "relations": {
+        "schedule": {
+            "type": "belongsTo",
+            "model": "ScheduledCommunication",
+            "foreignKey": "scheduleId"
+        }
+    },
+    "acls": [
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "ADMIN",
+            "permission": "ALLOW"
+        },
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "sendMessage"
+        },
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "startSchedule"
+        },
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "stopSchedule"
+        },
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "addSchedule"
+        },
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "deleteSchedule"
+        }
+    ],
+    "methods": {}
+}

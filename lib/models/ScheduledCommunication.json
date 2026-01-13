@@ -1,0 +1,82 @@
+{
+    "name": "ScheduledCommunication",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "mixins": {
+        "Slug": {}
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "unique": true,
+            "required": true
+        },
+        "channel": {
+            "type": "string",
+            "required": true
+        },
+        "recurrenceRule": {
+            "type": "string",
+            "required": false
+        },
+        "data": {
+            "type": "object",
+            "required": false
+        },
+        "enabled": {
+            "type": "boolean",
+            "required": false,
+            "default": true
+        },
+        "sendOnce": {
+            "type": "boolean",
+            "required": false,
+            "default": false
+        },
+        "createdBy": {
+            "type": "string",
+            "required": false
+        },
+        "deleted": {
+            "type": "boolean",
+            "default": false,
+            "required": false
+        },
+        "status": {
+            "type": "string",
+            "required": false,
+            "default": ""
+        },
+        "wherePid": {
+            "type": "number",
+            "required": true
+        },
+        "recipients": {
+            "type": [
+                "string"
+            ],
+            "required": false,
+            "default": []
+        }
+    },
+    "validations": [],
+    "relations": {
+        "tracking": {
+            "type": "belongsTo",
+            "model": "CommunicationTracking",
+            "foreignKey": "trackingId"
+        }
+    },
+    "acls": [
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "ADMIN",
+            "permission": "ALLOW"
+        }
+    ],
+    "methods": {}
+}

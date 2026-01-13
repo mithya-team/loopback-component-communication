@@ -1,0 +1,33 @@
+{
+    "name": "loopback-component-communication",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/loopback-component-communication"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@sendgrid/mail": "^6.5.4",
+        "cron-validator": "^1.1.1",
+        "html-to-text": "^5.1.1",
+        "http-status-codes": "^1.4.0",
+        "lodash": "^4.17.15",
+        "loopback": "^3.26.0",
+        "loopback-component-trash": "git+ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/loopback-component-trash",
+        "moment": "^2.27.0",
+        "node-schedule": "^1.3.2",
+        "twilio": "^3.40.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.5.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "^2.0.5"
+    }
+}

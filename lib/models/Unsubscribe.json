@@ -1,0 +1,43 @@
+{
+    "name": "Unsubscribe",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+      "validateUpsert": true
+    },
+    "mixins": {
+    },
+    "properties": {
+        "flow":{
+            "type":["string"],
+            "required":true
+        },
+        "channel":{
+            "type":["string"],
+            "required":true
+        },
+        "email":{
+            "type":"string",
+            "required":false
+        },
+        "sms":{
+            "type":"string",
+            "required":false
+        },
+        "userId":{
+            "type":"string",
+            "required":false
+        }
+    },
+    "validations": [],
+    "relations": {
+        "user":{
+            "type": "belongsTo",
+            "model": "User",
+            "foreignKey": "userId"
+        }
+    },
+    "acls": [],
+    "methods": {}
+  }
+  
